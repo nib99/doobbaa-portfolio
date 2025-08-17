@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOOBBAA - Making a Difference Together</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .progress-bar { animation: fillProgress 2s ease-in-out; }
+        @keyframes fillProgress { from { width: 0%; } }
+        .fade-in { animation: fadeIn 0.8s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">D</span>
+                        </div>
+                        <span class="ml-3 text-xl font-bold text-gray-800">DOOBBAA</span>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="text-blue-600 font-medium">Home</a>
+                        <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors">About</a>
+                        <a href="#projects" class="text-gray-600 hover:text-blue-600 transition-colors">Projects</a>
+                        <a href="#gallery" class="text-gray-600 hover:text-blue-600 transition-colors">Gallery</a>
+                        <a href="#volunteer" class="text-gray-600 hover:text-blue-600 transition-colors">Volunteer</a>
+                        <a href="#blog" class="text-gray-600 hover:text-blue-600 transition-colors">Blog</a>
+                        <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
+                        <button onclick="showPage('donate-page')" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all">
+                            Donate Now
+                        </button>
+                        <div class="text-xs text-gray-500 ml-4">
+                            Developed by <span class="font-semibold text-blue-600">Nibras Ahmed</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="home" class="page">
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <h1 class="text-5xl font-bold mb-6 leading-tight">
+                        WELCOME TO DOOBBAA CHARITY ORGANIZATION
+                    </h1>
+                    <p class="text-xl mb-8 text-blue-100">
+                        Join DOOBBAA in creating positive change across communities. Every donation, every volunteer hour, every share makes a real impact.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button onclick="showPage('donate-page')" class="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all">
+                            Start Donating
+                        </button>
+                        <button class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-all">
+                            Become a Volunteer
+                        </button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                        <div class="text-center mb-6">
+                            <h3 class="text-2xl font-bold mb-2">Current Campaign</h3>
+                            <p class="text-blue-100">Clean Water for Rural Communities</p>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-2">
+                                <span>Progress</span>
+                                <span>$75,000 / $100,000</span>
+                            </div>
+                            <div class="bg-white/20 rounded-full h-3">
+                                <div class="bg-yellow-400 h-3 rounded-full progress-bar" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-3 gap-4 text-center">
+                            <div>
+                                <div class="text-2xl font-bold">1,247</div>
+                                <div class="text-sm text-blue-100">Donors</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold">89%</div>
+                                <div class="text-sm text-blue-100">Complete</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold">12</div>
+                                <div class="text-sm text-blue-100">Days Left</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">About DOOBBAA</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We're a dedicated charity organization committed to creating lasting positive change in communities worldwide through sustainable projects and community empowerment.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center card-hover bg-gray-50 p-8 rounded-xl">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-heart text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Our Mission</h3>
+                    <p class="text-gray-600">Empowering communities through sustainable development, education, and healthcare initiatives that create lasting positive impact.</p>
+                </div>
+                <div class="text-center card-hover bg-gray-50 p-8 rounded-xl">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-eye text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Our Vision</h3>
+                    <p class="text-gray-600">A world where every community has access to basic necessities, quality education, and opportunities for growth and prosperity.</p>
+                </div>
+                <div class="text-center card-hover bg-gray-50 p-8 rounded-xl">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-hands-helping text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Our Values</h3>
+                    <p class="text-gray-600">Transparency, community-driven solutions, sustainability, and unwavering commitment to making a meaningful difference.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Our Projects</h2>
+                <p class="text-xl text-gray-600">Making real impact through focused initiatives</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                    <div class="h-48 bg-gradient-to-r from-blue-400 to-blue-600 flex items-center justify-center">
+                        <i class="fas fa-tint text-white text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Clean Water Initiative</h3>
+                        <p class="text-gray-600 mb-4">Providing clean, safe drinking water to rural communities through well construction and water purification systems.</p>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-2">
+                                <span>Progress</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                            Support This Project
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                    <div class="h-48 bg-gradient-to-r from-green-400 to-green-600 flex items-center justify-center">
+                        <i class="fas fa-graduation-cap text-white text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Education for All</h3>
+                        <p class="text-gray-600 mb-4">Building schools and providing educational resources to underserved communities, ensuring every child has access to quality education.</p>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-2">
+                                <span>Progress</span>
+                                <span>60%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-2">
+                                <div class="bg-green-500 h-2 rounded-full" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <button class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors">
+                            Support This Project
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                    <div class="h-48 bg-gradient-to-r from-red-400 to-red-600 flex items-center justify-center">
+                        <i class="fas fa-heartbeat text-white text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Healthcare Access</h3>
+                        <p class="text-gray-600 mb-4">Establishing mobile clinics and health centers to provide essential medical care to remote and underserved areas.</p>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-2">
+                                <span>Progress</span>
+                                <span>45%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-2">
+                                <div class="bg-red-500 h-2 rounded-full" style="width: 45%"></div>
+                            </div>
+                        </div>
+                        <button class="w-full bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 transition-colors">
+                            Support This Project
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Our Impact Gallery</h2>
+                <p class="text-xl text-gray-600">See the difference we're making together in communities worldwide</p>
+            </div>
+            
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Image 1 - Clean Water -->
+                <div class="group relative overflow-hidden rounded-xl shadow-lg card-hover cursor-pointer" onclick="openModal('modal1')">
+                    <div class="h-64 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <i class="fas fa-tint text-4xl mb-3"></i>
+                            <h3 class="text-lg font-semibold">Clean Water Project</h3>
+                            <p class="text-sm opacity-90">Kenya, 2024</p>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                        <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition-all duration-300"></i>
+                    </div>
+                </div>
+
+                <!-- Image 2 - Education -->
+                <div class="group relative overflow-hidden rounded-xl shadow-lg card-hover cursor-pointer" onclick="openModal('modal2')">
+                    <div class="h-64 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <i class="fas fa-graduation-cap text-4xl mb-3"></i>
+                            <h3 class="text-lg font-semibold">School Opening</h3>
+                            <p class="text-sm opacity-90">Bangladesh, 2024</p>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                        <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition-all duration-300"></i>
+                    </div>
+                </div>
+
+                <!-- Image 3 - Healthcare -->
+                <div class="group relative overflow-hidden rounded-xl shadow-lg card-hover cursor-pointer" onclick="openModal('modal3')">
+                    <div class="h-64 bg-gradient-to-br from-red-400 to-red-600 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <i class="fas fa-heartbeat text-4xl mb-3"></i>
+                            <h3 class="text-lg font-semibold">Mobile Clinic</h3>
+                            <p class="text-sm opacity-90">Ethiopia, 2024</p>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                        <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition-all duration-300"></i>
+                    </div>
+                </div>
+
+                <!-- Image 4 - Community -->
+                <div class="group relative overflow-hidden rounded-xl shadow-lg card-hover cursor-pointer" onclick="openModal('modal4')">
+                    <div class="h-64 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <i class="fas fa-users text-4xl mb-3"></i>
+                            <h3 class="text-lg font-semibold">Community Meeting</h3>
+                            <p class="text-sm opacity-90">Uganda, 2024</p>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                        <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition-all duration-300"></i>
+                    </div>
+                </div>
+
+                <!-- Image 5 - Volunteers -->
+                <div class="group relative overflow-hidden rounded-xl shadow-lg card-hover cursor-pointer" onclick="openModal('modal5')">
+                    <div class="h-64 bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <i class="fas fa-hands-helping text-4xl mb-3"></i>
+                            <h3 class="text-lg font-semibold">Volunteer Team</h3>
+                            <p class="text-sm opacity-90">Tanzania, 2024</p>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                        <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition-all duration-300"></i>
+                    </div>
+                </div>
+
+                <!-- Image 6 - Food Distribution -->
+                <div class="group relative overflow-hidden rounded-xl shadow-lg card-hover cursor-pointer" onclick="openModal('modal6')">
+                    <div class="h-64 bg-gradient-to-br from-indigo-400 to-indigo-600 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <i class="fas fa-utensils text-4xl mb-3"></i>
+                            <h3 class="text-lg font-semibold">Food Distribution</h3>
+                            <p class="text-sm opacity-90">Somalia, 2024</p>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                        <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition-all duration-300"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View More Button -->
+            <div class="text-center mt-12">
+                <button class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all">
+                    View More Photos
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Modal -->
+    <div id="gallery-modal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden">
+            <div class="flex justify-between items-center p-6 border-b">
+                <h3 id="modal-title" class="text-2xl font-bold text-gray-800"></h3>
+                <button onclick="closeModal()" class="text-gray-500 hover:text-gray-700 text-2xl">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="p-6">
+                <div id="modal-content" class="text-center">
+                    <!-- Modal content will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Donation Form Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Make a Donation</h2>
+                <p class="text-xl text-gray-600">Your contribution makes a real difference</p>
+            </div>
+            <div class="bg-gray-50 rounded-2xl p-8">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-6">Choose Amount</h3>
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <button class="bg-white border-2 border-blue-600 text-blue-600 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all">$25</button>
+                            <button class="bg-white border-2 border-gray-300 text-gray-600 py-3 rounded-lg font-semibold hover:border-blue-600 hover:text-blue-600 transition-all">$50</button>
+                            <button class="bg-white border-2 border-gray-300 text-gray-600 py-3 rounded-lg font-semibold hover:border-blue-600 hover:text-blue-600 transition-all">$100</button>
+                            <button class="bg-white border-2 border-gray-300 text-gray-600 py-3 rounded-lg font-semibold hover:border-blue-600 hover:text-blue-600 transition-all">$250</button>
+                        </div>
+                        <input type="number" placeholder="Custom amount" class="w-full p-3 border border-gray-300 rounded-lg mb-6">
+                        <div class="mb-6">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Select Project</label>
+                            <select class="w-full p-3 border border-gray-300 rounded-lg">
+                                <option>Clean Water Initiative</option>
+                                <option>Education for All</option>
+                                <option>Healthcare Access</option>
+                                <option>General Fund</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-6">Donor Information</h3>
+                        <div class="space-y-4">
+                            <input type="text" placeholder="Full Name" class="w-full p-3 border border-gray-300 rounded-lg">
+                            <input type="email" placeholder="Email Address" class="w-full p-3 border border-gray-300 rounded-lg">
+                            <input type="tel" placeholder="Phone Number" class="w-full p-3 border border-gray-300 rounded-lg">
+                            <div class="flex items-center">
+                                <input type="checkbox" id="anonymous" class="mr-3">
+                                <label for="anonymous" class="text-sm text-gray-600">Make this donation anonymous</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" id="monthly" class="mr-3">
+                                <label for="monthly" class="text-sm text-gray-600">Make this a monthly donation</label>
+                            </div>
+                        </div>
+                        <button class="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-4 rounded-lg font-semibold mt-6 hover:shadow-lg transition-all">
+                            <i class="fas fa-lock mr-2"></i>
+                            Secure Donation - $25
+                        </button>
+                        <p class="text-xs text-gray-500 text-center mt-3">
+                            <span class="text-red-600 font-semibold">Demo:</span> This is a sample donation form. No actual payment will be processed.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteer Section -->
+    <section id="volunteer" class="py-20 bg-gradient-to-r from-green-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Become a Volunteer</h2>
+                <p class="text-xl text-gray-600">Join our community of changemakers</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6">Why Volunteer with Us?</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-check text-white text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Make Real Impact</h4>
+                                <p class="text-gray-600">See the direct results of your efforts in communities</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-check text-white text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Flexible Opportunities</h4>
+                                <p class="text-gray-600">Choose from various roles that fit your schedule</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-check text-white text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Skill Development</h4>
+                                <p class="text-gray-600">Gain valuable experience and new skills</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-6">Volunteer Application</h3>
+                    <div class="space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <input type="text" placeholder="First Name" class="p-3 border border-gray-300 rounded-lg">
+                            <input type="text" placeholder="Last Name" class="p-3 border border-gray-300 rounded-lg">
+                        </div>
+                        <input type="email" placeholder="Email Address" class="w-full p-3 border border-gray-300 rounded-lg">
+                        <input type="tel" placeholder="Phone Number" class="w-full p-3 border border-gray-300 rounded-lg">
+                        <select class="w-full p-3 border border-gray-300 rounded-lg">
+                            <option>Select Area of Interest</option>
+                            <option>Education & Teaching</option>
+                            <option>Healthcare & Medical</option>
+                            <option>Construction & Infrastructure</option>
+                            <option>Fundraising & Events</option>
+                            <option>Administrative Support</option>
+                        </select>
+                        <textarea placeholder="Tell us about your experience and motivation" rows="4" class="w-full p-3 border border-gray-300 rounded-lg"></textarea>
+                        <button class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+                            Submit Application
+                        </button>
+                        <p class="text-xs text-gray-500 text-center">
+                            <span class="text-red-600 font-semibold">Demo:</span> This is a sample volunteer form. No actual application will be submitted.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Reports -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Impact Reports</h2>
+                <p class="text-xl text-gray-600">Transparency in action - see how your donations make a difference</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-xl p-6 card-hover">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-lg font-semibold">2024 Annual Report</h3>
+                        <i class="fas fa-download text-blue-600"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">Comprehensive overview of our achievements, financial transparency, and impact metrics for 2024.</p>
+                    <div class="flex justify-between text-sm text-gray-500 mb-4">
+                        <span>Published: Jan 2024</span>
+                        <span>PDF • 2.3MB</span>
+                    </div>
+                    <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                        Download Report
+                    </button>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6 card-hover">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-lg font-semibold">Q3 Impact Summary</h3>
+                        <i class="fas fa-download text-green-600"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">Quarterly update on project progress, beneficiary stories, and financial breakdown.</p>
+                    <div class="flex justify-between text-sm text-gray-500 mb-4">
+                        <span>Published: Oct 2024</span>
+                        <span>PDF • 1.8MB</span>
+                    </div>
+                    <button class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors">
+                        Download Report
+                    </button>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6 card-hover">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-lg font-semibold">Financial Audit 2024</h3>
+                        <i class="fas fa-download text-purple-600"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">Independent audit results ensuring complete transparency in fund allocation and usage.</p>
+                    <div class="flex justify-between text-sm text-gray-500 mb-4">
+                        <span>Published: Dec 2024</span>
+                        <span>PDF • 1.2MB</span>
+                    </div>
+                    <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors">
+                        Download Report
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Latest Stories</h2>
+                <p class="text-xl text-gray-600">Updates from the field and inspiring stories of change</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <article class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                    <div class="h-48 bg-gradient-to-r from-blue-400 to-blue-600 flex items-center justify-center">
+                        <i class="fas fa-newspaper text-white text-3xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-gray-500 mb-2">December 15, 2024</div>
+                        <h3 class="text-xl font-semibold mb-3">Clean Water Reaches 500 Families</h3>
+                        <p class="text-gray-600 mb-4">Our latest water project in rural Kenya has successfully provided clean, safe drinking water to over 500 families...</p>
+                        <a href="#" class="text-blue-600 font-medium hover:text-blue-700">Read More →</a>
+                    </div>
+                </article>
+                <article class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                    <div class="h-48 bg-gradient-to-r from-green-400 to-green-600 flex items-center justify-center">
+                        <i class="fas fa-school text-white text-3xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-gray-500 mb-2">December 10, 2024</div>
+                        <h3 class="text-xl font-semibold mb-3">New School Opens in Bangladesh</h3>
+                        <p class="text-gray-600 mb-4">Thanks to our generous donors, we've opened a new primary school that will serve 300 children in rural Bangladesh...</p>
+                        <a href="#" class="text-green-600 font-medium hover:text-green-700">Read More →</a>
+                    </div>
+                </article>
+                <article class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                    <div class="h-48 bg-gradient-to-r from-purple-400 to-purple-600 flex items-center justify-center">
+                        <i class="fas fa-users text-white text-3xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-gray-500 mb-2">December 5, 2024</div>
+                        <h3 class="text-xl font-semibold mb-3">Volunteer Spotlight: Sarah's Journey</h3>
+                        <p class="text-gray-600 mb-4">Meet Sarah, one of our dedicated volunteers who has been making a difference in education programs for over two years...</p>
+                        <a href="#" class="text-purple-600 font-medium hover:text-purple-700">Read More →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Get in Touch</h2>
+                <p class="text-xl text-gray-600">We'd love to hear from you</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Address</h4>
+                                <p class="text-gray-600">123 Charity Street, Hope City, HC 12345</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-phone text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Phone</h4>
+                                <p class="text-gray-600">+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-purple-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Email</h4>
+                                <p class="text-gray-600">info@doobbaa.org</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fab fa-whatsapp text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">WhatsApp</h4>
+                                <p class="text-gray-600">+1 (555) 987-6543</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-2xl p-8">
+                    <h3 class="text-2xl font-semibold mb-6">Send us a Message</h3>
+                    <div class="space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <input type="text" placeholder="First Name" class="p-3 border border-gray-300 rounded-lg">
+                            <input type="text" placeholder="Last Name" class="p-3 border border-gray-300 rounded-lg">
+                        </div>
+                        <input type="email" placeholder="Email Address" class="w-full p-3 border border-gray-300 rounded-lg">
+                        <input type="text" placeholder="Subject" class="w-full p-3 border border-gray-300 rounded-lg">
+                        <textarea placeholder="Your Message" rows="5" class="w-full p-3 border border-gray-300 rounded-lg"></textarea>
+                        <button class="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all">
+                            Send Message
+                        </button>
+                        <p class="text-xs text-gray-500 text-center">
+                            <span class="text-red-600 font-semibold">Demo:</span> This is a sample contact form. No actual message will be sent.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">D</span>
+                        </div>
+                        <span class="ml-3 text-xl font-bold">DOOBBAA</span>
+                    </div>
+                    <p class="text-gray-300 mb-6">Making a difference together through sustainable community development and empowerment initiatives.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-400 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#about" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#projects" class="text-gray-300 hover:text-white transition-colors">Our Projects</a></li>
+                        <li><a href="#volunteer" class="text-gray-300 hover:text-white transition-colors">Volunteer</a></li>
+                        <li><a href="#blog" class="text-gray-300 hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Programs</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Clean Water</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Education</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Healthcare</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Emergency Relief</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Community Development</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Newsletter</h4>
+                    <p class="text-gray-300 mb-4">Stay updated with our latest news and impact stories.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="flex-1 p-3 rounded-l-lg text-gray-800">
+                        <button class="bg-gradient-to-r from-blue-500 to-purple-600 px-6 py-3 rounded-r-lg hover:shadow-lg transition-all">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p class="text-gray-300">&copy; 2024 DOOBBAA. All rights reserved. | Privacy Policy | Terms of Service</p>
+                <p class="text-gray-400 text-sm mt-2">Developed by <span class="font-semibold text-blue-400">Nibras Ahmed</span></p>
+            </div>
+        </div>
+    </footer>
+    </div>
+
+    <!-- Donation Page -->
+    <div id="donate-page" class="page" style="display: none;">
+        <!-- Donation Page Header -->
+        <div class="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <button onclick="showPage('home')" class="absolute top-20 left-8 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <h1 class="text-4xl font-bold mb-4">Make a Donation</h1>
+                <p class="text-xl text-blue-100">Your generosity creates lasting change in communities worldwide</p>
+            </div>
+        </div>
+
+        <!-- Donation Form -->
+        <div class="py-16 bg-gray-50 min-h-screen">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                    <div class="grid md:grid-cols-2">
+                        <!-- Left Side - Donation Details -->
+                        <div class="p-8 bg-gradient-to-br from-blue-50 to-purple-50">
+                            <h2 class="text-2xl font-bold text-gray-800 mb-6">Donation Details</h2>
+                            
+                            <!-- Amount Selection -->
+                            <div class="mb-6">
+                                <label class="block text-sm font-semibold text-gray-700 mb-3">Select Amount (USD)</label>
+                                <div class="grid grid-cols-2 gap-3 mb-4">
+                                    <button class="donation-amount bg-white border-2 border-blue-600 text-blue-600 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all" data-amount="25">$25</button>
+                                    <button class="donation-amount bg-white border-2 border-gray-300 text-gray-600 py-3 rounded-lg font-semibold hover:border-blue-600 hover:text-blue-600 transition-all" data-amount="50">$50</button>
+                                    <button class="donation-amount bg-white border-2 border-gray-300 text-gray-600 py-3 rounded-lg font-semibold hover:border-blue-600 hover:text-blue-600 transition-all" data-amount="100">$100</button>
+                                    <button class="donation-amount bg-white border-2 border-gray-300 text-gray-600 py-3 rounded-lg font-semibold hover:border-blue-600 hover:text-blue-600 transition-all" data-amount="250">$250</button>
+                                </div>
+                                <input type="number" id="custom-amount" placeholder="Enter custom amount" class="w-full p-3 border border-gray-300 rounded-lg" min="1">
+                            </div>
+
+                            <!-- Project Selection -->
+                            <div class="mb-6">
+                                <label class="block text-sm font-semibold text-gray-700 mb-3">Select Project</label>
+                                <select id="project-type" class="w-full p-3 border border-gray-300 rounded-lg">
+                                    <option value="clean-water">Clean Water Initiative</option>
+                                    <option value="education">Education for All</option>
+                                    <option value="healthcare">Healthcare Access</option>
+                                    <option value="emergency">Emergency Relief</option>
+                                    <option value="general">General Fund</option>
+                                </select>
+                            </div>
+
+                            <!-- Donation Type -->
+                            <div class="mb-6">
+                                <label class="block text-sm font-semibold text-gray-700 mb-3">Donation Type</label>
+                                <div class="flex gap-4">
+                                    <label class="flex items-center">
+                                        <input type="radio" name="donation-type" value="one-time" checked class="mr-2">
+                                        <span>One-time</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="radio" name="donation-type" value="monthly" class="mr-2">
+                                        <span>Monthly</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Current Date & Time Display -->
+                            <div class="bg-white p-4 rounded-lg border border-gray-200">
+                                <h3 class="font-semibold text-gray-700 mb-2">Donation Time</h3>
+                                <div id="current-datetime" class="text-gray-600"></div>
+                            </div>
+                        </div>
+
+                        <!-- Right Side - Donor Information & Payment -->
+                        <div class="p-8">
+                            <h2 class="text-2xl font-bold text-gray-800 mb-6">Donor Information</h2>
+                            
+                            <div class="space-y-4 mb-6">
+                                <div class="grid grid-cols-2 gap-4">
+                                    <input type="text" id="first-name" placeholder="First Name" class="p-3 border border-gray-300 rounded-lg" required>
+                                    <input type="text" id="last-name" placeholder="Last Name" class="p-3 border border-gray-300 rounded-lg" required>
+                                </div>
+                                <input type="email" id="email" placeholder="Email Address" class="w-full p-3 border border-gray-300 rounded-lg" required>
+                                <input type="tel" id="phone" placeholder="Phone Number" class="w-full p-3 border border-gray-300 rounded-lg">
+                                
+                                <!-- Country Selection -->
+                                <select id="country" class="w-full p-3 border border-gray-300 rounded-lg" required>
+                                    <option value="">Select Country</option>
+                                    <option value="ET">Ethiopia</option>
+                                    <option value="US">United States</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="GB">United Kingdom</option>
+                                    <option value="DE">Germany</option>
+                                    <option value="FR">France</option>
+                                    <option value="AU">Australia</option>
+                                    <option value="KE">Kenya</option>
+                                    <option value="NG">Nigeria</option>
+                                    <option value="ZA">South Africa</option>
+                                    <option value="IN">India</option>
+                                    <option value="BD">Bangladesh</option>
+                                    <option value="other">Other</option>
+                                </select>
+
+                                <div class="flex items-center space-x-4">
+                                    <label class="flex items-center">
+                                        <input type="checkbox" id="anonymous" class="mr-2">
+                                        <span class="text-sm">Make donation anonymous</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Payment Method -->
+                            <div class="mb-6">
+                                <h3 class="text-lg font-semibold text-gray-800 mb-4">Payment Method</h3>
+                                <div class="space-y-3">
+                                    <label class="flex items-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+                                        <input type="radio" name="payment-method" value="chapa" checked class="mr-3">
+                                        <div class="flex items-center">
+                                            <div class="w-8 h-8 bg-green-600 rounded flex items-center justify-center mr-3">
+                                                <i class="fas fa-credit-card text-white text-sm"></i>
+                                            </div>
+                                            <div>
+                                                <div class="font-semibold">Chapa Payment</div>
+                                                <div class="text-sm text-gray-600">Secure payment via Chapa (Cards, Mobile Money)</div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="flex items-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+                                        <input type="radio" name="payment-method" value="bank" class="mr-3">
+                                        <div class="flex items-center">
+                                            <div class="w-8 h-8 bg-blue-600 rounded flex items-center justify-center mr-3">
+                                                <i class="fas fa-university text-white text-sm"></i>
+                                            </div>
+                                            <div>
+                                                <div class="font-semibold">Bank Transfer</div>
+                                                <div class="text-sm text-gray-600">Direct bank transfer</div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Donation Summary -->
+                            <div class="bg-gray-50 p-4 rounded-lg mb-6">
+                                <h3 class="font-semibold text-gray-700 mb-3">Donation Summary</h3>
+                                <div class="space-y-2 text-sm">
+                                    <div class="flex justify-between">
+                                        <span>Amount:</span>
+                                        <span id="summary-amount" class="font-semibold">$25.00</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span>Project:</span>
+                                        <span id="summary-project" class="font-semibold">Clean Water Initiative</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span>Type:</span>
+                                        <span id="summary-type" class="font-semibold">One-time</span>
+                                    </div>
+                                    <div class="border-t pt-2 mt-2">
+                                        <div class="flex justify-between font-bold">
+                                            <span>Total:</span>
+                                            <span id="summary-total">$25.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button id="process-donation" class="w-full bg-gradient-to-r from-green-600 to-blue-600 text-white py-4 rounded-lg font-semibold hover:shadow-lg transition-all">
+                                <i class="fas fa-lock mr-2"></i>
+                                Process Secure Donation
+                            </button>
+                            
+                            <p class="text-xs text-gray-500 text-center mt-3">
+                                <span class="text-red-600 font-semibold">Demo:</span> This is a sample donation form. No actual payment will be processed.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Developer Credit -->
+                <div class="text-center mt-8">
+                    <p class="text-gray-600">
+                        Developed by <span class="font-semibold text-blue-600">Nibras Ahmed</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Page navigation system
+        let currentPage = 'home';
+        
+        function showPage(pageId) {
+            // Hide all pages
+            document.querySelectorAll('.page').forEach(page => {
+                page.style.display = 'none';
+            });
+            // Show selected page
+            document.getElementById(pageId).style.display = 'block';
+            currentPage = pageId;
+            
+            // Update navigation active state
+            document.querySelectorAll('nav a').forEach(link => {
+                link.classList.remove('text-blue-600', 'font-medium');
+                link.classList.add('text-gray-600');
+            });
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        // Smooth scrolling for navigation links (only for home page sections)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const href = this.getAttribute('href');
+                
+                if (href === '#donate-page') {
+                    showPage('donate-page');
+                    return;
+                }
+                
+                if (currentPage !== 'home') {
+                    showPage('home');
+                    setTimeout(() => {
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    }, 100);
+                } else {
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Donation amount selection
+        document.querySelectorAll('button').forEach(button => {
+            if (button.textContent.includes('$')) {
+                button.addEventListener('click', function() {
+                    // Remove active class from all amount buttons
+                    document.querySelectorAll('button').forEach(btn => {
+                        if (btn.textContent.includes('$')) {
+                            btn.className = btn.className.replace('bg-blue-600 text-white', 'bg-white border-2 border-gray-300 text-gray-600');
+                        }
+                    });
+                    // Add active class to clicked button
+                    this.className = this.className.replace('bg-white border-2 border-gray-300 text-gray-600', 'bg-white border-2 border-blue-600 text-blue-600');
+                    
+                    // Update donation button text
+                    const amount = this.textContent;
+                    const donateButton = document.querySelector('button:contains("Secure Donation")');
+                    if (donateButton) {
+                        donateButton.innerHTML = `<i class="fas fa-lock mr-2"></i>Secure Donation - ${amount}`;
+                    }
+                });
+            }
+        });
+
+        // Form submissions (demo alerts)
+        document.querySelectorAll('button').forEach(button => {
+            if (button.textContent.includes('Secure Donation')) {
+                button.addEventListener('click', function() {
+                    alert('Demo: This would process a secure donation through your payment gateway integration.');
+                });
+            }
+            if (button.textContent.includes('Submit Application')) {
+                button.addEventListener('click', function() {
+                    alert('Demo: This would submit the volunteer application to your database.');
+                });
+            }
+            if (button.textContent.includes('Send Message')) {
+                button.addEventListener('click', function() {
+                    alert('Demo: This would send your message to the DOOBBAA team.');
+                });
+            }
+            if (button.textContent.includes('Download Report')) {
+                button.addEventListener('click', function() {
+                    alert('Demo: This would download the impact report PDF.');
+                });
+            }
+        });
+
+        // Newsletter subscription
+        document.querySelector('button i.fa-paper-plane').parentElement.addEventListener('click', function() {
+            alert('Demo: This would subscribe you to the DOOBBAA newsletter.');
+        });
+
+        // Gallery Modal Functions
+        function openModal(modalId) {
+            const modal = document.getElementById('gallery-modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalContent = document.getElementById('modal-content');
+            
+            const galleryData = {
+                'modal1': {
+                    title: 'Clean Water Project - Kenya 2024',
+                    content: `
+                        <div class="h-96 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg flex items-center justify-center mb-6">
+                            <div class="text-center text-white">
+                                <i class="fas fa-tint text-6xl mb-4"></i>
+                                <h3 class="text-2xl font-bold">Clean Water Initiative</h3>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-lg mb-4">Our clean water project in rural Kenya has successfully provided access to safe drinking water for over 500 families. This initiative includes well construction, water purification systems, and community education on water hygiene.</p>
+                        <div class="grid grid-cols-3 gap-4 text-center">
+                            <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="text-2xl font-bold text-blue-600">500+</div>
+                                <div class="text-sm text-gray-600">Families Served</div>
+                            </div>
+                            <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="text-2xl font-bold text-blue-600">12</div>
+                                <div class="text-sm text-gray-600">Wells Built</div>
+                            </div>
+                            <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="text-2xl font-bold text-blue-600">100%</div>
+                                <div class="text-sm text-gray-600">Clean Water</div>
+                            </div>
+                        </div>
+                    `
+                },
+                'modal2': {
+                    title: 'School Opening - Bangladesh 2024',
+                    content: `
+                        <div class="h-96 bg-gradient-to-br from-green-400 to-green-600 rounded-lg flex items-center justify-center mb-6">
+                            <div class="text-center text-white">
+                                <i class="fas fa-graduation-cap text-6xl mb-4"></i>
+                                <h3 class="text-2xl font-bold">Education for All</h3>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-lg mb-4">The opening of our new primary school in rural Bangladesh marks a milestone in our education initiative. This school will serve 300 children and includes modern classrooms, a library, and computer lab.</p>
+                        <div class="grid grid-cols-3 gap-4 text-center">
+                            <div class="bg-green-50 p-4 rounded-lg">
+                                <div class="text-2xl font-bold text-green-600">300</div>
+                                <div class="text-sm text-gray-600">Students</div>
+                            </div>
+                            <div class="bg-green-50 p-4 rounded-lg">
+                                <div class="text-2xl font-bold text-green-600">15</div>
+                                <div class="text-sm text-gray-600">Teachers</div>
+                            </div>
+                            <div class="bg-green-50 p-4 rounded-lg">
+                                <div class="text-2xl font-bold text-green-600">8</div>
+                                <div class="text-sm text-gray-600">Classrooms</div>
+                            </div>
+                        </div>
+                    `
+                },
+                'modal3': {
+                    title: 'Mobile Clinic - Ethiopia 2024',
+                    content: `
+                        <div class="h-96 bg-gradient-to-br from-red-400 to-red-600 rounded-lg flex items-center justify-center mb-6">
+                            <div class="text-center text-white">
+                                <i class="fas fa-heartbeat text-6xl mb-4"></i>
+                                <h3 class="text-2xl font-bold">Healthcare Access</h3>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-lg mb-4">Our mobile clinic program in Ethiopia brings essential healthcare services directly to remote communities. The clinic provides basic medical care, vaccinations, and health education to underserved populations.</p>
+                        <div class="grid grid-cols-3 gap-4 text-center">
+                            <div class="bg-red-50 p-4 rounded-lg">
+                                <div class="text-2xl font-bold text-red-600">1,200+</div>
+                                <div class="text-sm text-gray-600">Patients Treated</div>
+                            </div>
+                            <div class="bg-red-50 p-4 rounded-lg">
+                                <div class="text-2xl font-bold text-red-600">25</div>
+                                <div class="text-sm text-gray-600">Villages Visited</div>
+                            </div>
+                            <div class="bg-red-50 p-4 rounded-lg">
+                                <div class="text-2xl font-bold text-red-600">6</div>
+                                <div class="text-sm text-gray-600">Medical Staff</div>
+                            </div>
+                        </div>
+                    `
+                },
+                'modal4': {
+                    title: 'Community Meeting - Uganda 2024',
+                    content: `
+                        <div class="h-96 bg-gradient-to-br from-purple-400 to-purple-600 rounded-lg flex items-center justify-center mb-6">
+                            <div class="text-center text-white">
+                                <i class="fas fa-users text-6xl mb-4"></i>
+                                <h3 class="text-2xl font-bold">Community Engagement</h3>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-lg mb-4">Community meetings are essential to our approach. In Uganda, we regularly gather with local leaders and residents to discuss project progress, gather feedback, and plan future initiatives together.</p>
+                        <div class="grid grid-cols-3 gap-4 text-center">
+                            <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="text-2xl font-bold text-purple-600">150+</div>
+                                <div class="text-sm text-gray-600">Participants</div>
+                            </div>
+                            <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="text-2xl font-bold text-purple-600">12</div>
+                                <div class="text-sm text-gray-600">Monthly Meetings</div>
+                            </div>
+                            <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="text-2xl font-bold text-purple-600">8</div>
+                                <div class="text-sm text-gray-600">Communities</div>
+                            </div>
+                        </div>
+                    `
+                },
+                'modal5': {
+                    title: 'Volunteer Team - Tanzania 2024',
+                    content: `
+                        <div class="h-96 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center mb-6">
+                            <div class="text-center text-white">
+                                <i class="fas fa-hands-helping text-6xl mb-4"></i>
+                                <h3 class="text-2xl font-bold">Volunteer Program</h3>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-lg mb-4">Our dedicated volunteer team in Tanzania works tirelessly to support various community development projects. From construction to education, our volunteers make a real difference in people's lives.</p>
+                        <div class="grid grid-cols-3 gap-4 text-center">
+                            <div class="bg-yellow-50 p-4 rounded-lg">
+                                <div class="text-2xl font-bold text-orange-600">45</div>
+                                <div class="text-sm text-gray-600">Active Volunteers</div>
+                            </div>
+                            <div class="bg-yellow-50 p-4 rounded-lg">
+                                <div class="text-2xl font-bold text-orange-600">2,400</div>
+                                <div class="text-sm text-gray-600">Hours Contributed</div>
+                            </div>
+                            <div class="bg-yellow-50 p-4 rounded-lg">
+                                <div class="text-2xl font-bold text-orange-600">15</div>
+                                <div class="text-sm text-gray-600">Projects Completed</div>
+                            </div>
+                        </div>
+                    `
+                },
+                'modal6': {
+                    title: 'Food Distribution - Somalia 2024',
+                    content: `
+                        <div class="h-96 bg-gradient-to-br from-indigo-400 to-indigo-600 rounded-lg flex items-center justify-center mb-6">
+                            <div class="text-center text-white">
+                                <i class="fas fa-utensils text-6xl mb-4"></i>
+                                <h3 class="text-2xl font-bold">Emergency Relief</h3>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-lg mb-4">Our emergency food distribution program in Somalia provides vital nutrition support to families affected by drought and conflict. We work with local partners to ensure aid reaches those who need it most.</p>
+                        <div class="grid grid-cols-3 gap-4 text-center">
+                            <div class="bg-indigo-50 p-4 rounded-lg">
+                                <div class="text-2xl font-bold text-indigo-600">2,000+</div>
+                                <div class="text-sm text-gray-600">Families Fed</div>
+                            </div>
+                            <div class="bg-indigo-50 p-4 rounded-lg">
+                                <div class="text-2xl font-bold text-indigo-600">50</div>
+                                <div class="text-sm text-gray-600">Tons of Food</div>
+                            </div>
+                            <div class="bg-indigo-50 p-4 rounded-lg">
+                                <div class="text-2xl font-bold text-indigo-600">30</div>
+                                <div class="text-sm text-gray-600">Distribution Points</div>
+                            </div>
+                        </div>
+                    `
+                }
+            };
+            
+            const data = galleryData[modalId];
+            if (data) {
+                modalTitle.textContent = data.title;
+                modalContent.innerHTML = data.content;
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('gallery-modal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('gallery-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Mobile menu toggle (basic implementation)
+        document.querySelector('.fa-bars').parentElement.addEventListener('click', function() {
+            alert('Demo: This would toggle the mobile navigation menu.');
+        });
+
+        // Donation page functionality
+        function updateDateTime() {
+            const now = new Date();
+            const options = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                timeZoneName: 'short'
+            };
+            document.getElementById('current-datetime').textContent = now.toLocaleDateString('en-US', options);
+        }
+
+        // Update date/time every second
+        setInterval(updateDateTime, 1000);
+        updateDateTime(); // Initial call
+
+        // Donation amount selection
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('donation-amount')) {
+                // Remove active class from all amount buttons
+                document.querySelectorAll('.donation-amount').forEach(btn => {
+                    btn.className = btn.className.replace('border-blue-600 text-blue-600', 'border-gray-300 text-gray-600');
+                });
+                
+                // Add active class to clicked button
+                e.target.className = e.target.className.replace('border-gray-300 text-gray-600', 'border-blue-600 text-blue-600');
+                
+                // Update summary
+                const amount = e.target.getAttribute('data-amount');
+                updateDonationSummary(amount);
+                
+                // Clear custom amount
+                document.getElementById('custom-amount').value = '';
+            }
+        });
+
+        // Custom amount input
+        document.getElementById('custom-amount').addEventListener('input', function() {
+            const amount = this.value;
+            if (amount && amount > 0) {
+                // Remove active class from preset buttons
+                document.querySelectorAll('.donation-amount').forEach(btn => {
+                    btn.className = btn.className.replace('border-blue-600 text-blue-600', 'border-gray-300 text-gray-600');
+                });
+                updateDonationSummary(amount);
+            }
+        });
+
+        // Project type change
+        document.getElementById('project-type').addEventListener('change', function() {
+            const projectNames = {
+                'clean-water': 'Clean Water Initiative',
+                'education': 'Education for All',
+                'healthcare': 'Healthcare Access',
+                'emergency': 'Emergency Relief',
+                'general': 'General Fund'
+            };
+            document.getElementById('summary-project').textContent = projectNames[this.value];
+        });
+
+        // Donation type change
+        document.addEventListener('change', function(e) {
+            if (e.target.name === 'donation-type') {
+                const type = e.target.value === 'one-time' ? 'One-time' : 'Monthly';
+                document.getElementById('summary-type').textContent = type;
+            }
+        });
+
+        function updateDonationSummary(amount) {
+            const formattedAmount = '$' + parseFloat(amount).toFixed(2);
+            document.getElementById('summary-amount').textContent = formattedAmount;
+            document.getElementById('summary-total').textContent = formattedAmount;
+        }
+
+        // Process donation
+        document.getElementById('process-donation').addEventListener('click', function() {
+            const firstName = document.getElementById('first-name').value;
+            const lastName = document.getElementById('last-name').value;
+            const email = document.getElementById('email').value;
+            const country = document.getElementById('country').value;
+            const amount = document.getElementById('summary-amount').textContent;
+            const project = document.getElementById('summary-project').textContent;
+            const paymentMethod = document.querySelector('input[name="payment-method"]:checked').value;
+            
+            if (!firstName || !lastName || !email || !country) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            const paymentMethodName = paymentMethod === 'chapa' ? 'Chapa Payment' : 'Bank Transfer';
+            
+            alert(`Demo: Processing donation...\n\nDonor: ${firstName} ${lastName}\nEmail: ${email}\nCountry: ${country}\nAmount: ${amount}\nProject: ${project}\nPayment: ${paymentMethodName}\n\nThis would redirect to the ${paymentMethodName} gateway.`);
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'970a19211729f7f3',t:'MTc1NTQ0MzQyNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+
